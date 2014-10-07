@@ -1,7 +1,6 @@
 package main
 
 import "fmt"
-import "math"
 
 // Multiples of 3 and 5
 // projecteuler.net/problem=1
@@ -21,10 +20,10 @@ func solve1() (sum int) {
 }
 
 func solve2() (int) {
-    natSum := func (target float64) (int) {
-        n := math.Floor(1000 / target)
+    natSum := func (target int) (int) {
+        n := 999 / target
 
-        return (int)(target * n * (n + 1) * 0.5)
+        return (target * n * (n + 1)) / 2
     }
 
     return natSum(3) + natSum(5) - natSum(15)
