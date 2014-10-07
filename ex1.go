@@ -1,17 +1,31 @@
 package main
 
 import "fmt"
+import "math"
 
 // Multiples of 3 and 5
 // projecteuler.net/problem=1
 func main() {
-    sum := 0
+    fmt.Printf("Solution 1: %d\n", solve1());
+    fmt.Printf("Solution 2: %d\n", solve2());
+}
 
-    for i := 1; i < 1000; i++ {
+func solve1() (sum int) {
+    for i := 1; i <= 999; i++ {
         if i % 3 == 0 || i % 5 == 0 {
             sum += i
         }
     }
 
-    fmt.Printf("The answer is %d\n", sum)
+    return
+}
+
+func solve2() (int) {
+    natSum := func (target float64) (int) {
+        n := math.Floor(1000 / target)
+
+        return (int)(target * n * (n + 1) * 0.5)
+    }
+
+    return natSum(3) + natSum(5) - natSum(15)
 }
