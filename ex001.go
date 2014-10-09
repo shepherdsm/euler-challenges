@@ -9,14 +9,16 @@ func main() {
 	fmt.Printf("Solution 2: %d\n", solve2())
 }
 
-func solve1() (sum int) {
+func solve1() int {
+	sum := 0
+
 	for i := 1; i <= 999; i++ {
 		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
 
-	return
+	return sum
 }
 
 func solve2() int {

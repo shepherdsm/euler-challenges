@@ -9,12 +9,14 @@ func main() {
 	fmt.Printf("Solution 2: %d\n", solve2())
 }
 
-func sumTheSquares(upper int) (sum int) {
+func sumTheSquares(upper int) int {
+	sum := 0
+
 	for i := 1; i <= upper; i++ {
 		sum += i * i
 	}
 
-	return
+	return sum
 }
 
 func squareTheSum(upper int) int {

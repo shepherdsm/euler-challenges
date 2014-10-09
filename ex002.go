@@ -6,6 +6,8 @@ import (
 	"github.com/shepherdsm/euler/fib"
 )
 
+// Even Fibonacci numbers
+// projecteuler.net/problem=2
 func main() {
 	fmt.Printf("Solution 1: %d\n", solve1())
 }
