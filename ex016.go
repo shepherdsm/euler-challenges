@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math/big"
+
+	b "github.com/shepherdsm/euler/big"
 )
 
 // Power digit sum
@@ -12,14 +14,5 @@ func main() {
 }
 
 func solve1() int64 {
-	sum := big.NewInt(0)
-	rem := big.NewInt(0)
-	num := big.NewInt(0).Exp(big.NewInt(2), big.NewInt(1000), nil)
-
-	for num.Cmp(big.NewInt(0)) > 0 {
-		num.DivMod(num, big.NewInt(10), rem)
-		sum.Add(sum, rem)
-	}
-
-	return sum.Int64()
+	return b.DigitSum(big.NewInt(0).Exp(big.NewInt(2), big.NewInt(1000), nil))
 }
