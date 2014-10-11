@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/shepherdsm/euler"
+	"github.com/shepherdsm/euler/fib"
 )
 
 // Even Fibonacci numbers
@@ -16,7 +16,7 @@ func solve1() uint {
 	var upper uint = 4000000
 	var sum uint = 0
 
-	for _, val := range euler.Under(upper) {
+	for _, val := range fib.Under(upper) {
 		if val%2 == 0 {
 			sum += val
 		}
